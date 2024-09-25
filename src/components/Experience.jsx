@@ -26,17 +26,19 @@ export default function Experience(props) {
 
     return (
         <div>
-            <h1 className='clickable-header' onClick={toggleDisplay}>Experience</h1>
-            {display && 
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Company Name' value={company} onChange={(e) => setCompany(e.target.value)}/>
-                <input type='text' placeholder='Position' value={position} onChange={(e) => setPosition(e.target.value)}/>
-                <input type='text' placeholder='Responsibilities' value={responsibilities} onChange={(e) => setResponsibilities(e.target.value)}/>
-                <input type='text' placeholder='Start Date' value={start} onChange={(e) => setStart(e.target.value)}/>
-                <input type='text' placeholder='End Date' value={end} onChange={(e) => setEnd(e.target.value)}/>
-                
-                <input type='submit' />
-            </form>}
+                <h1 className='clickable-header' onClick={toggleDisplay}>Experience</h1>
+                {display && 
+                    <>
+                        <input type='text' placeholder='Company Name' value={company} onChange={(e) => setCompany(e.target.value)}/>
+                        <input type='text' placeholder='Position' value={position} onChange={(e) => setPosition(e.target.value)}/>
+                        <input type='text' placeholder='Responsibilities' value={responsibilities} onChange={(e) => setResponsibilities(e.target.value)}/>
+                        <input type='text' placeholder='Start Year' value={start} onChange={(e) => setStart(e.target.value)}/>
+                        <input type='text' placeholder='End Year' value={end} onChange={(e) => setEnd(e.target.value)}/>
+                        
+                        <input type='submit' />
+                    </>}
+            </form>
         </div>
     )
 }

@@ -24,16 +24,17 @@ export default function Education(props) {
 
     return (
         <div>
-            <h1 className='clickable-header' onClick={toggleDisplay}>Education</h1>
-            {display && 
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='School Name' value={schoolName} onChange={(e) => setSchoolName(e.target.value)}/>
-                <input type='text' placeholder='Title of Study' value={studyTitle} onChange={(e) => setStudyTitle(e.target.value)}/>
-                <input type='text' placeholder='Start Date' value={start} onChange={(e) => setStart(e.target.value)}/>
-                <input type='text' placeholder='End Date' value={end} onChange={(e) => setEnd(e.target.value)}/>
-                
-                <input type='submit' />
-            </form>}
+                <h1 className='clickable-header' onClick={toggleDisplay}>Education</h1>
+                {display && 
+                    <>
+                    <input type='text' placeholder='School Name' value={schoolName} onChange={(e) => setSchoolName(e.target.value)}/>
+                    <input type='text' placeholder='Title of Study' value={studyTitle} onChange={(e) => setStudyTitle(e.target.value)}/>
+                    <input type='text' placeholder='Start Year' value={start} onChange={(e) => setStart(e.target.value)}/>
+                    <input type='text' placeholder='End Year' value={end} onChange={(e) => setEnd(e.target.value)}/>
+                    <input type='submit' />
+                    </>}
+            </form>
         </div>
     )
 }

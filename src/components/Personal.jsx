@@ -22,15 +22,17 @@ export default function Personal(props) {
     
     return (
         <div>
-            <h1 className='clickable-header' onClick={toggleDisplay}>Personal Info</h1>
-            {display && 
             <form onSubmit={handleSubmit}>
-                <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}/>
-                <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
-                <input type='text' placeholder='Phone Number' value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                
-                <input type='submit' />
-            </form>}
+                <h1 className='clickable-header' onClick={toggleDisplay}>Personal Info</h1>
+                {display && 
+                    <>
+                    <input type='text' placeholder='Name' value={name} onChange={(e) => setName(e.target.value)}/>
+                    <input type='text' placeholder='Email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    <input type='text' placeholder='Phone Number' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                    
+                    <input type='submit' />
+                    </>}
+            </form>
         </div>
     )
 }
